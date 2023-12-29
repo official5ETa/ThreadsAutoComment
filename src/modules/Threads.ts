@@ -1,6 +1,6 @@
 import { Query } from '../classes/Query';
 import { Thread } from '../classes/Thread';
-import { timeout } from '../helper/helper';
+import { timeout, type } from '../helper/helper';
 import { commentInput, commentPopup, loadingSpinner } from '../share/threadsQs';
 
 export class Threads {
@@ -34,6 +34,7 @@ export class Threads {
     while (!input!);
     input.click();
 
+    await type('test123', input);
     // TODO: type comment
     // TODO: post comment
   }
